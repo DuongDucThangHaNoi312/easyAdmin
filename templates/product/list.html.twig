@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Danh mục sản phẩm{% endblock %}
+{% block body %}
+
+<h1>Bảng Products </h1>
+
+        <table   class="table"  >
+
+            <tr class="bg-primary">
+                <th >ID</th>
+                <th >Name</th>
+                <th >Price</th>
+                <th >CategoryID</th>
+                <th >Delete</th>
+                <th >Update</th>
+
+            </tr>
+
+
+            {% for product in products %}
+                <tr>
+                    <td> {{ product.id }} </td>
+                    <td> {{ product.name }} </td>
+                    <td> {{ product.price }} </td>
+                    <td> {{ product.category.id}} </td>
+                    <td>   <button class="btn btn-danger" type="submit" ><a style="text-decoration: none ;color: black " href="{{ path ('productDelete',{'id':product.id}) }}">Delete</a></button></td>
+                    <td>   <button class="btn btn-warning" type="submit" ><a style="text-decoration: none ;color: black" href="{{ path ('productEdit',{'id':product.id})}}">Edit</a></button></td>
+                </tr>
+            {% endfor %}
+
+
+
+        </table>
+
+    <button> <a href="{{ path ('home')}}">Return</a></button></td>
+
+
+
+
+    {% endblock %}

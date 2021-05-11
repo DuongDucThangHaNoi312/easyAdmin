@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Danh mục sản phẩm{% endblock %}
+{% block body %}
+    <h1>
+        Bảng Sản Phẩm
+    </h1>
+
+    <button class="btn btn-primary">  <a style="text-decoration: none ; color: black" href=" {{ path('product') }}"> Thêm Sản Phẩm </a> </button>
+    <button class="btn btn-primary">  <a style="text-decoration: none ; color: black" href=" {{ path('productList') }}"> Danh sách sản phẩm </a> </button>
+
+    <button class="btn btn-primary">  <a style="text-decoration: none ; color: black" href=" {{ path('category') }}"> Thêm Category </a> </button>
+    <button class="btn btn-primary">  <a style="text-decoration: none ; color: black" href=" {{ path('CategoryList') }}"> Danh sách Category </a> </button>
+
+    {% endblock %}

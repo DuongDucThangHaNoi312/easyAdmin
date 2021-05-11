@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello TaskController!{% endblock %}
+
+{% block body %}
+    <h1>
+        Category
+    </h1>
+
+    {{ form_start(form) }}
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>
+                {{ form_widget (form.name) }}
+            </td>
+        </tr>
+    </table>
+
+    {{ form_end(form) }}
+
+{% endblock %}

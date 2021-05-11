@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello TaskController!{% endblock %}
+
+{% block body %}
+    <h1>
+        Sản Phẩm
+    </h1>
+
+    {{ form_start(form) }}
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>
+                {{ form_widget (form.name) }}
+                <br>
+                {{ form_errors(form.name) }}
+            </td>
+        </tr>
+
+        <tr>
+            <td>Price</td>
+            <td>
+                {{  form_widget (form.price) }}
+                <br>
+                {{
+                form_errors(form.price) }}
+            </td>
+        </tr>
+
+        <tr>
+            <td>Category</td>
+            <td>
+                {{  form_widget (form.category) }}
+                <br>
+                {{
+                form_errors(form.category) }}
+            </td>
+        </tr>
+
+
+
+    </table>
+
+
+    {{ form_end(form) }}
+
+
+
+
+
+{% endblock %}
